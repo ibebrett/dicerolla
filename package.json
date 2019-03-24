@@ -27,7 +27,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "CI=true npm test"
+      "pre-commit": "npx eslint src && CI=true npm test"
     }
   }
 }
