@@ -14,7 +14,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,8 +28,8 @@
     "not op_mini all"
   ],
   "lint-staged": {
-   "*.js": "eslint",
-   "*.css": "stylelint"
+    "*.js": "eslint",
+    "*.css": "stylelint"
   },
   "husky": {
     "hooks": {
@@ -35,8 +37,10 @@
     }
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "lint-staged": "^8.1.5",
     "pre-commit": "^1.2.2"
   },
-  "pre-commit": "lint-staged"
+  "pre-commit": "lint-staged",
+  "homepage": "http://ibebrett.github.io/dicerolla"
 }
