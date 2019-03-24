@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 
-const DICE_SIDES = [2, 4, 6, 8, 10, 12];
+const DICE_SIDES = [2, 4, 6, 8, 10, 12, 20];
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class App extends Component {
 
     this.state = {
       sides: 6,
-      count: 3,
+      count: 1,
       rolls: [],
       total: null
     };
@@ -44,7 +44,7 @@ class App extends Component {
           <p>Dice Rolla</p>
           <label>
             Sides:
-            <select value={this.sides} onChange={e => this.sidesChange(e)}>
+            <select value={this.state.sides} onChange={e => this.sidesChange(e)}>
               {DICE_SIDES.map((val, index) => (
                 <option key={val}>{val}</option>
               ))}
