@@ -3,6 +3,7 @@ import "./App.css";
 
 class App extends Component {
   render() {
+    let x= '123';
     return (
       <div className="App">
         <header className="App-header">
